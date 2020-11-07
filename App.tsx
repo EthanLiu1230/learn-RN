@@ -1,25 +1,54 @@
 import * as React from 'react';
 import styled from 'styled-components/native';
 import Card from './components/Card';
+import { SafeAreaView, ScrollView } from 'react-native';
 
-interface Props {}
+interface OwnProps {}
+
+type Props = OwnProps;
 
 const App: React.FC<Props> = () => {
   return (
     <Container>
-      <TitleBar>
-        <Avatar source={require('./assets/avatar.jpg')}/>
-        <Title>Welcome back,</Title>
-        <Name>Ethan</Name>
-        <Subtitle>Continue Learning</Subtitle>
-      </TitleBar>
-      <Card
-        title="Styled Components"
-        image={require('./assets/background2.jpg')}
-        caption="React Native"
-        subtitle="5 of 12 sections"
-        logo={require('./assets/logo-react.png')}
-      />
+      <SafeAreaView>
+        <ScrollView style={{ height: '100%' }}>
+          <TitleBar>
+            <Avatar source={require('./assets/avatar.jpg')}/>
+            <Title>Welcome back,</Title>
+            <Name>Ethan</Name>
+            <Subtitle>Continue Learning</Subtitle>
+          </TitleBar>
+          <ScrollView
+            horizontal={true}
+            style={{ paddingBottom: 30 }}
+            showsHorizontalScrollIndicator={false}
+          >
+            <Card
+              title="Styled Components"
+              image={require('./assets/background2.jpg')}
+              caption="React Native"
+              subtitle="5 of 12 sections"
+              logo={require('./assets/logo-react.png')}
+            />
+            <Card
+              title="Styled Component3"
+              image={require('./assets/background3.jpg')}
+              caption="React Native"
+              subtitle="5 of 12 sections"
+              logo={require('./assets/logo-react.png')}
+            />
+            <Card
+              title="Styled Components 4"
+              image={require('./assets/background4.jpg')}
+              caption="React Native"
+              subtitle="5 of 12 sections"
+              logo={require('./assets/logo-react.png')}
+            />
+          </ScrollView>
+        </ScrollView>
+      </SafeAreaView>
+
+
     </Container>
   );
 };
