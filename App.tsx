@@ -2,6 +2,7 @@ import * as React from 'react';
 import styled from 'styled-components/native';
 import Card from './components/Card';
 import { SafeAreaView, ScrollView } from 'react-native';
+import Icons from '@expo/vector-icons';
 
 interface OwnProps {}
 
@@ -16,6 +17,16 @@ const App: React.FC<Props> = () => {
             <Avatar source={require('./assets/avatar.jpg')}/>
             <Title>Welcome back,</Title>
             <Name>Ethan</Name>
+            <Icons.Ionicons
+              name="ios-notifications"
+              size={32}
+              color="#4775f2"
+              style={{
+                position: 'absolute',
+                right: 20,
+                top: 5,
+              }}
+            />
             <Subtitle>Continue Learning</Subtitle>
           </TitleBar>
           <ScrollView
