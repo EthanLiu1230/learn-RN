@@ -1,8 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components/native';
+import Card from './components/Card';
 
-interface Props {
-}
+interface Props {}
 
 const App: React.FC<Props> = () => {
   return (
@@ -13,16 +13,17 @@ const App: React.FC<Props> = () => {
         <Name>Ethan</Name>
         <Subtitle>Continue Learning</Subtitle>
       </TitleBar>
-      {/*<Card*/}
-      {/*  title="Styled Components"*/}
-      {/*  image={require('./assets/background2.jpg')}*/}
-      {/*  caption="React Native"*/}
-      {/*  subtitle="5 of 12 sections"*/}
-      {/*  logo={require('./assets/logo-react.png')}*/}
-      {/*/>*/}
+      <Card
+        title="Styled Components"
+        image={require('./assets/background2.jpg')}
+        caption="React Native"
+        subtitle="5 of 12 sections"
+        logo={require('./assets/logo-react.png')}
+      />
     </Container>
   );
 };
+
 export default App;
 
 const Container = styled.View`
